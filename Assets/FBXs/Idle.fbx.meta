@@ -1,67 +1,80 @@
 fileFormatVersion: 2
-guid: 8ad4b9fae3c46ba44924066c2c0d24c1
-timeCreated: 1517083547
+guid: 6a8d93df66a22474595a3c2cd5d6f57b
+timeCreated: 1517086004
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Head
-    100002: Hips
-    100004: Human_Mesh
-    100006: LeftArm
-    100008: LeftElbow
-    100010: LeftFoot
-    100012: LeftHand1
-    100014: LeftHand2
-    100016: LeftKnee
-    100018: LeftLeg
-    100020: LeftThumb
-    100022: LeftWrist
-    100024: Master
-    100026: Neck
-    100028: //RootNode
-    100030: RightArm
-    100032: RightElbow
-    100034: RightFoot
-    100036: RightHand1
-    100038: RightHand2
-    100040: RightLeg
-    100042: RightThumb1
-    100044: RighttKnee
-    100046: RightWrist
-    100048: Spine
-    100050: Spine1
-    100052: Spine2
-    400000: Head
-    400002: Hips
-    400004: Human_Mesh
-    400006: LeftArm
-    400008: LeftElbow
-    400010: LeftFoot
-    400012: LeftHand1
-    400014: LeftHand2
-    400016: LeftKnee
-    400018: LeftLeg
-    400020: LeftThumb
-    400022: LeftWrist
-    400024: Master
-    400026: Neck
-    400028: //RootNode
-    400030: RightArm
-    400032: RightElbow
-    400034: RightFoot
-    400036: RightHand1
-    400038: RightHand2
-    400040: RightLeg
-    400042: RightThumb1
-    400044: RighttKnee
-    400046: RightWrist
-    400048: Spine
-    400050: Spine1
-    400052: Spine2
+    100000: Front
+    100002: Head
+    100004: Helmet
+    100006: Hips
+    100008: Human_Mesh
+    100010: //RootNode
+    100012: LeftArm
+    100014: LeftElbow
+    100016: LeftFoot
+    100018: LeftHand1
+    100020: LeftHand2
+    100022: LeftKnee
+    100024: LeftLeg
+    100026: LeftThumb
+    100028: LeftWrist
+    100030: Master
+    100032: Neck
+    100034: RightArm
+    100036: RightElbow
+    100038: RightFoot
+    100040: RightHand1
+    100042: RightHand2
+    100044: RightLeg
+    100046: RightThumb1
+    100048: RighttKnee
+    100050: RightWrist
+    100052: Spine
+    100054: Spine1
+    100056: Spine2
+    400000: Front
+    400002: Head
+    400004: Helmet
+    400006: Hips
+    400008: Human_Mesh
+    400010: //RootNode
+    400012: LeftArm
+    400014: LeftElbow
+    400016: LeftFoot
+    400018: LeftHand1
+    400020: LeftHand2
+    400022: LeftKnee
+    400024: LeftLeg
+    400026: LeftThumb
+    400028: LeftWrist
+    400030: Master
+    400032: Neck
+    400034: RightArm
+    400036: RightElbow
+    400038: RightFoot
+    400040: RightHand1
+    400042: RightHand2
+    400044: RightLeg
+    400046: RightThumb1
+    400048: RighttKnee
+    400050: RightWrist
+    400052: Spine
+    400054: Spine1
+    400056: Spine2
     2100000: Texture
+    2100002: Silver
+    2100004: Red
+    2100006: DarkEyes
+    2300000: Front
+    2300002: Helmet
+    3300000: Front
+    3300002: Helmet
     4300000: Human_Mesh
-    7400000: Movement
+    4300002: Helmet
+    4300004: Front
+    7400000: Idle
     9500000: //RootNode
     13700000: Human_Mesh
   externalObjects: {}
@@ -92,10 +105,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Movement
+      name: Idle
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 30
+      lastFrame: 41
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
