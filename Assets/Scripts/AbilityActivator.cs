@@ -4,29 +4,44 @@ using UnityEngine;
 
 public enum AbilityType
 {
-	Sword, 
-	Shield, 
-	Gun, 
-	Shotgun, 
-	Bombs, 
-	Spear, 
-	Scythe, 
+	Sword,
+	/// <summary>
+	/// Nice to have.
+	/// </summary>
+	Shield,
+	Gun,
+	Shotgun,
+	Bombs,
+	Spear,
+	Scythe,
+	/// <summary>
+	/// Nice to have.
+	/// </summary>
 	Heal
 }
 
-public class AbilityActivator : MonoBehaviour 
+public struct AbilityData
 {
-	public Ability _abilityPrefab;
-	public float _abilityStartUp;
-	public AbilityType _type;
+	public Ability abilityPrefab;
+	public int amount;
+	public AbilityType type;
+	public float abilityCooldown;
+}
+
+public class AbilityActivator : MonoBehaviour
+{
+	private AbilityData _data;
+	private float _lastTime;
 
     private void Update()
     {
-		Debug.Log(Input.GetAxis("Fire1"));
-        if (Input.GetAxis("Fire1") > 0)
+        if (Input.GetAxis("Fire1") > 0 && Time.time > _lastTime + _data.abilityCooldown)
 		{
-			// do the thing
-			Debug.Log("Doing it!");
+			_lastTime = Time.time;
+			for (var i = 0; i < _data.amount; ++i)
+			{
+				Instantiate(_data.abilityPrefab, transform.position + transform.forward, transform.rotation);
+			}
 		}
     }
 }
