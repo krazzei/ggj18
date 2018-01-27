@@ -6,6 +6,11 @@ public class Movement : MonoBehaviour
 	private Vector3 _movement;
 	private Transform _transform;
 
+	public Vector3 MovementDir
+	{
+		get { return _movement; }
+	}
+
 	private void Awake()
 	{
 		_movement = new Vector3();

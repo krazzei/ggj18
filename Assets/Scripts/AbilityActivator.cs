@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum AbilityType
 {
+	None,
 	Sword,
 	/// <summary>
 	/// Nice to have.
@@ -44,4 +45,11 @@ public class AbilityActivator : MonoBehaviour
 			}
 		}
     }
+
+	public AbilityData Swap(AbilityData newData)
+	{
+		var oldData = _data;
+		_data = newData;
+		return oldData;
+	}
 }

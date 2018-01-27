@@ -83,3 +83,6 @@ MonoBehaviour:
   damage: 1
   spawnRotationDeviation: 0
   speed: 0
+  dieOnHit: 0
+  timeToLive: -1
+  deathEffect: {fileID: 0}
