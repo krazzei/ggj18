@@ -23,8 +23,6 @@ public class JoystickAim : MonoBehaviour
 			return;
 		}
 
-		Debug.Log(x + " " + z);
-
 #if UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
 		// the driver I'm using inverts the Y axis.
 		z *= -1;
