@@ -17,10 +17,8 @@ public class Movement : MonoBehaviour
 	/// </summary>
 	private void Update()
 	{
-		var x = Input.GetAxis("Horizontal");
-		var y = Input.GetAxis("Vertical");
-		_movement.x = x;
-		_movement.z = y;
+		_movement.x = Input.GetAxis("Horizontal");
+		_movement.z = Input.GetAxis("Vertical");
 		// Normalized because on keyboard you can move at a higher speed going
 		// diagonal.
 		_movement.Normalize();
