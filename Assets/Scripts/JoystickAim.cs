@@ -30,7 +30,7 @@ public class JoystickAim : MonoBehaviour
 
 		_aim.x = x;
 		_aim.z = z;
-		_aim.y = _transform.position.y;
+		_aim.y = 0;
 
 		_transform.LookAt(_aim + _transform.position);
     }
