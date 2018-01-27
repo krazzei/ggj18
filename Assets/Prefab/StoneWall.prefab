@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33831020920979842}
   - component: {fileID: 23444998581373850}
   - component: {fileID: 65896868749685510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StoneWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
