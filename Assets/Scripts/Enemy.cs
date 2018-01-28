@@ -80,11 +80,11 @@ public class Enemy : MonoBehaviour
 					_anim.SetInteger("State", (int)_state);
 				}
 
-				if (Vector3.Distance(transform.position, _player.transform.position) > attackRange)
-				{
-					_state = EnemyState.Pathing;
-					_anim.SetInteger("State", (int)_state);
-				}
+				//if (Vector3.Distance(transform.position, _player.transform.position) > attackRange)
+				//{
+				//	_state = EnemyState.Pathing;
+				//	_anim.SetInteger("State", (int)_state);
+				//}
 				break;
 			case EnemyState.Attacking:
 				transform.LookAt(_player.transform);
