@@ -396,6 +396,9 @@ GameObject:
   - component: {fileID: 114364022730986676}
   - component: {fileID: 114371055076407112}
   - component: {fileID: 54386299699562620}
+  - component: {fileID: 95584133159389462}
+  - component: {fileID: 114937832986244742}
+  - component: {fileID: 114393948119891648}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -908,7 +911,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728700509068054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.69, y: 0.38, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4564183474170934}
@@ -1196,6 +1199,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95584133159389462
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728700509068054}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: cf5214b2b3576e94793a6addb88801fa, type: 3}
+  m_Controller: {fileID: 9100000, guid: a28825df4d3a3a8419ef70509eeeb0ac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114024535493759358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1225,7 +1245,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728700509068054}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b6b620f9797a47f09653ac11aae72fd, type: 3}
   m_Name: 
@@ -1252,9 +1272,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e5c73a2e8bd4a8cbfc285ef7496fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 2
+  cooldown: 3
   distance: 5
-  duration: 0.5
+  duration: 0.2
+--- !u!114 &114393948119891648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728700509068054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c3a9ac003704cbba875963f3289354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 0
+  _maxHealth: 100
+  _hitCooldown: 3
+  _isInvincible: 0
+  _invincibleDuration: 3
+  _modifierQueue: {fileID: 114937832986244742}
+--- !u!114 &114937832986244742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728700509068054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805b43bd0a5fe45fe8ef37ec4525f65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numModifiersToHold: 5
 --- !u!136 &136248181089098150
 CapsuleCollider:
   m_ObjectHideFlags: 1

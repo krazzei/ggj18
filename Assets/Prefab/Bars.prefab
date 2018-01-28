@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33551762782016210}
   - component: {fileID: 23479054353450006}
   - component: {fileID: 65006591268621068}
+  - component: {fileID: 114931726754426874}
   m_Layer: 8
   m_Name: Bars
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1079872531486938}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.050883293, y: 0.36156562, z: 3.0847616}
+  m_LocalPosition: {x: -0.87, y: 0, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,3 +96,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12946764, y: 2.424267, z: 1.5507507}
   m_Center: {x: 0, y: 1.1984209, z: 0.0000013709068}
+--- !u!114 &114931726754426874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079872531486938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad6e21c639982435481e4915e1111c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayedStartLength: 0
