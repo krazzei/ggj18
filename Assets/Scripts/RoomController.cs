@@ -5,16 +5,11 @@ using UnityEngine;
 
 public class RoomController : MonoBehaviour 
 {
-
-    [SerializeField]
-    protected GameObject _roomObject;
     protected List<ObjectActivator> _roomObjectsToActivate = new List<ObjectActivator>();
-
-
 
     protected void Start()
     {
-        _roomObjectsToActivate = _roomObject.GetComponentsInChildren<ObjectActivator>().ToList();
+        _roomObjectsToActivate = gameObject.GetComponentsInChildren<ObjectActivator>().ToList();
 	}
 	
     protected void Update() 
