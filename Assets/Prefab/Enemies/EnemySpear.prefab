@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4061409777184784}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4280368920918744}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4546658459377798}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftWrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4123584842137146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4488829077769042}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightWrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4097039198828040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4213077836272046}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4574616481532264}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftElbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4493886989073640}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4204741452634986}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,8 @@ GameObject:
   - component: {fileID: 114974427402156288}
   - component: {fileID: 114120059655914958}
   - component: {fileID: 65488876581449786}
-  m_Layer: 0
+  - component: {fileID: 54199972119719806}
+  m_Layer: 10
   m_Name: EnemySpear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +192,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4269710100109562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +207,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4253537389481902}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +224,7 @@ GameObject:
   - component: {fileID: 4533361654834504}
   - component: {fileID: 33926586711146618}
   - component: {fileID: 23890154549543298}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KneePad1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +239,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4705986994237564}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +254,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4635416597063548}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightHand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4403414379650160}
   - component: {fileID: 137947775336927972}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Human_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +285,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4501987183698770}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +300,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4966268170975862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +315,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4126752664730814}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftKnee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +330,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4399048472910404}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightHand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +345,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4750660465468768}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +360,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4653180387042732}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightElbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +377,7 @@ GameObject:
   - component: {fileID: 4860364377003560}
   - component: {fileID: 33316073319970064}
   - component: {fileID: 23216965132728390}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ElbowPad2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +392,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4934319244732350}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +407,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4286903048951820}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +422,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4840781616824712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RighttKnee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +439,7 @@ GameObject:
   - component: {fileID: 4070299356410308}
   - component: {fileID: 33784773954337682}
   - component: {fileID: 23991537428100280}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KneePad2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +454,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4583123188912122}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +469,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4281750084173088}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +486,7 @@ GameObject:
   - component: {fileID: 4362850107844840}
   - component: {fileID: 33710673264095678}
   - component: {fileID: 23770147430217424}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ElbowPad1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,6 +1090,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513813503256364}
   m_Mesh: {fileID: 4300006, guid: 63fec7f56c3be2c4a9b04e1eba9d8c68, type: 3}
+--- !u!54 &54199972119719806
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1189948994400372}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!65 &65488876581449786
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1099,7 +1115,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 5, z: 1.5}
+  m_Size: {x: 2.5, y: 5, z: 2.5}
   m_Center: {x: 0, y: 3, z: 0}
 --- !u!95 &95584447622904164
 Animator:
@@ -1155,7 +1171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aggroRange: 5
   attackRange: 2
-  attackWindup: 2.5
+  attackWindup: 2
   abilityData: {fileID: 11400000, guid: 9742c763a91e67843b732dc99fefbbdd, type: 2}
 --- !u!114 &114974427402156288
 MonoBehaviour:
@@ -1173,7 +1189,7 @@ MonoBehaviour:
   _hitCooldown: 0.2
   _isInvincible: 0
   _invincibleDuration: 0.2
-  _modifierQueue: {fileID: 0}
+  _modifierQueue: {fileID: 114281454448754200}
 --- !u!137 &137947775336927972
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
