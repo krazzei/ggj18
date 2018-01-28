@@ -21,15 +21,6 @@ public enum AbilityType
 	Heal
 }
 
-[CreateAssetMenu(fileName = "Data", menuName = "Ability/Data")]
-public class AbilityData : ScriptableObject
-{
-	public Ability abilityPrefab;
-	public int amount;
-	public AbilityType type;
-	public float abilityCooldown;
-}
-
 public class AbilityActivator : MonoBehaviour
 {
 	private AbilityData _data;
@@ -37,7 +28,7 @@ public class AbilityActivator : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetAxis("Fire1") > 0 && Time.time > _lastTime + _data.abilityCooldown)
+        if (Input.GetAxis("Fire1") > 0 && Time.time > _lastTime + _data.abilityCooldown && _data != null || _data.abilityPrefab != null)
 		{
 			_lastTime = Time.time;
 			for (var i = 0; i < _data.amount; ++i)
