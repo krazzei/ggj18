@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: dddb917cf6efb33448af482774e923bb
+timeCreated: 1517104239
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ChestArmor1
+    100002: ChestArmor2
+    100004: ChestArmor3
+    100006: //RootNode
+    100008: Head
+    100010: Hips
+    100012: Human_Mesh
+    100014: LeftArm
+    100016: LeftElbow
+    100018: LeftFoot
+    100020: LeftHand1
+    100022: LeftHand2
+    100024: LeftKnee
+    100026: LeftLeg
+    100028: LeftThumb
+    100030: LeftWrist
+    100032: Master
+    100034: Neck
+    100036: RightArm
+    100038: RightElbow
+    100040: RightFoot
+    100042: RightHand1
+    100044: RightHand2
+    100046: RightLeg
+    100048: RightThumb1
+    100050: RighttKnee
+    100052: RightWrist
+    100054: Spine
+    100056: Spine1
+    100058: Spine2
+    400000: ChestArmor1
+    400002: ChestArmor2
+    400004: ChestArmor3
+    400006: //RootNode
+    400008: Head
+    400010: Hips
+    400012: Human_Mesh
+    400014: LeftArm
+    400016: LeftElbow
+    400018: LeftFoot
+    400020: LeftHand1
+    400022: LeftHand2
+    400024: LeftKnee
+    400026: LeftLeg
+    400028: LeftThumb
+    400030: LeftWrist
+    400032: Master
+    400034: Neck
+    400036: RightArm
+    400038: RightElbow
+    400040: RightFoot
+    400042: RightHand1
+    400044: RightHand2
+    400046: RightLeg
+    400048: RightThumb1
+    400050: RighttKnee
+    400052: RightWrist
+    400054: Spine
+    400056: Spine1
+    400058: Spine2
+    2100000: Texture
+    2100002: lambert1
+    2300000: ChestArmor1
+    2300002: ChestArmor2
+    2300004: ChestArmor3
+    3300000: ChestArmor1
+    3300002: ChestArmor2
+    3300004: ChestArmor3
+    4300000: Human_Mesh
+    4300002: ChestArmor3
+    4300004: ChestArmor2
+    4300006: ChestArmor1
+    9500000: //RootNode
+    13700000: Human_Mesh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
