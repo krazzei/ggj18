@@ -1190,6 +1190,7 @@ MonoBehaviour:
   attackRange: 2.75
   attackWindup: 5
   abilityData: {fileID: 11400000, guid: 19982a0ec145f6e45b88cb943d05b278, type: 2}
+  offset: {x: 0, y: 0.1, z: 0}
 --- !u!137 &137909511530609032
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

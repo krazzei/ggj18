@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(TwigsGhettoAnimator))]
 public class AbilityActivator : MonoBehaviour
 {
+	public Vector3 offset;
+
 	private AbilityData _data;
 	private float _lastTime;
 	private TwigsGhettoAnimator _animator;
@@ -22,7 +24,7 @@ public class AbilityActivator : MonoBehaviour
 			_lastTime = Time.time;
 			for (var i = 0; i < _data.amount; ++i)
 			{
-				Instantiate(_data.abilityPrefab, transform.position + transform.forward, transform.rotation);
+				Instantiate(_data.abilityPrefab, transform.position + transform.forward + offset, transform.rotation);
 			}
 		}
     }

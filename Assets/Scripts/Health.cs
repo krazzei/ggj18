@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public bool IsInvincible { get { return _isInvincible || _isInvincibleWithDuration; } }
 
 	public System.Action<float, float> OnHealthChanged;
+	public System.Action OnDeath;
 
     [SerializeField]
     private float _currentHealth = 0.0f;
@@ -26,6 +27,7 @@ public class Health : MonoBehaviour
 
     private float _invincibleStartTime;
     private float _lastHitTime;
+	private bool _dead;
 
 	// Use this for initialization
 	void Start () 
@@ -34,6 +36,7 @@ public class Health : MonoBehaviour
         _modifierQueue.OnModRemoved -= OnModRemoved;
 
 		_currentHealth = MaxHealth;
+		_dead = false;
 	}
 
     private void OnModAdded(Modifier.ModifierData modData)
@@ -59,6 +62,11 @@ public class Health : MonoBehaviour
 
     public void AddHealth(float amount, AbilityWeaknesses damageType)
     {
+		if (_dead)
+		{
+			return;
+		}
+
         var amountAfterProcessing = 0f;
         if(amount < 0)
         {
@@ -76,6 +84,14 @@ public class Health : MonoBehaviour
         }
         _currentHealth += amountAfterProcessing;
 		HealthChanged();
+		if (_currentHealth <= 0)
+		{
+			_dead = true;
+			if (OnDeath != null)
+			{
+				OnDeath();
+			}
+		}
     }
 
     public void SetInvincible(bool isInvincible) {

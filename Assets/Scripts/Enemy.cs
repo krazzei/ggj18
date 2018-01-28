@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Animator), typeof(Health))]
 public class Enemy : MonoBehaviour
 {
 	public enum EnemyState
@@ -19,12 +19,14 @@ public class Enemy : MonoBehaviour
 	public float attackRange;
 	public float attackWindup;
 	public AbilityData abilityData;
+	public Vector3 offset;
 
 	private NavMeshAgent _agent;
 	private GameObject _player;
 	private EnemyState _state;
 	private float _attackBegin;
 	private Animator _anim;
+	private Health _health;
 
 	private void Awake()
 	{
@@ -34,9 +36,20 @@ public class Enemy : MonoBehaviour
 		_player = FindObjectOfType<Dash>().gameObject;
 		_anim = GetComponent<Animator>();
 		_anim.SetInteger("State", (int)EnemyState.Idle);
+		_health = GetComponent<Health>();
 	}
 
-	private void Update()
+    private void Start()
+    {
+		_health.OnDeath += Dead;
+    }
+
+	private void Dead()
+	{
+		_state = EnemyState.Dead;
+	}
+
+    private void Update()
 	{
 		switch (_state)
 		{
@@ -67,18 +80,19 @@ public class Enemy : MonoBehaviour
 					_anim.SetInteger("State", (int)_state);
 				}
 
-				if (Vector3.Distance(transform.position, _player.transform.position) > attackRange)
-				{
-					_state = EnemyState.Pathing;
-					_anim.SetInteger("State", (int)_state);
-				}
+				//if (Vector3.Distance(transform.position, _player.transform.position) > attackRange)
+				//{
+				//	_state = EnemyState.Pathing;
+				//	_anim.SetInteger("State", (int)_state);
+				//}
 				break;
 			case EnemyState.Attacking:
+				transform.LookAt(_player.transform);
 				if (abilityData != null && abilityData.abilityPrefab != null)
 				{
 					for (var i = 0; i < abilityData.amount; ++i)
 					{
-						Instantiate(abilityData.abilityPrefab, transform.position + transform.forward, transform.rotation);
+						Instantiate(abilityData.abilityPrefab, transform.position + transform.forward + offset, transform.rotation);
 					}
 				}
 				_state = EnemyState.Idle;
