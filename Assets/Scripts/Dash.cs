@@ -43,6 +43,7 @@ public class Dash : MonoBehaviour
 				_endPoint = info.point - _movement.MovementDir * 1.1f;
 			}
 			Debug.DrawLine(transform.position, _endPoint, Color.blue, 1, true);
+			//Hud.instance.MakeCooldownBar(transform, cooldown);
 			StartCoroutine(DashRoutine());
 		}
     }

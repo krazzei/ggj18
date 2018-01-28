@@ -42,11 +42,21 @@ public class Ability : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+		ProcessHit();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        ProcessHit();
+    }
+
+	private void ProcessHit()
+	{
 		// TODO: deal damage to the damage receiver.
 		Debug.Log("Hit");
 		if (dieOnHit)
 		{
 			Destroy(gameObject);
 		}
-    }
+	}
 }
