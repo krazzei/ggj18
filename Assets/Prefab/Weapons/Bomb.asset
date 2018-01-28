@@ -14,4 +14,4 @@ MonoBehaviour:
   abilityPrefab: {fileID: 114318061710702814, guid: 06f15f23330d424489a9d59940fa72e1,
     type: 2}
   amount: 1
-  abilityCooldown: 7
+  abilityCooldown: 5

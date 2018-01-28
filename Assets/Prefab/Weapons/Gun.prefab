@@ -122,4 +122,4 @@ MonoBehaviour:
   timeToLive: 0.1
   deathEffect: {fileID: 1695298094008564, guid: d28deeaf190d5cc4195ceeefec85a2ce,
     type: 2}
-  weakness: 0
+  weakness: 32
