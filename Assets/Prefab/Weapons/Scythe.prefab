@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33343846217729818}
   - component: {fileID: 23893355421533098}
   - component: {fileID: 114857592989198750}
+  - component: {fileID: 65336035430678444}
   m_Layer: 0
   m_Name: Scythe
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000805202428234}
   m_Mesh: {fileID: 4300000, guid: 5754ed710a15a3e409f793fcf7a3789a, type: 3}
+--- !u!65 &65336035430678444
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000805202428234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.494344, y: 0.21392986, z: 6.4795785}
+  m_Center: {x: 1.62366, y: -0.13038936, z: 1.3987579}
 --- !u!114 &114857592989198750
 MonoBehaviour:
   m_ObjectHideFlags: 1
