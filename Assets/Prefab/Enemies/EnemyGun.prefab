@@ -1078,7 +1078,7 @@ MonoBehaviour:
   _hitCooldown: 0.2
   _isInvincible: 0
   _invincibleDuration: 0.2
-  _modifierQueue: {fileID: 0}
+  _modifierQueue: {fileID: 114544185094216856}
 --- !u!114 &114544185094216856
 MonoBehaviour:
   m_ObjectHideFlags: 1
