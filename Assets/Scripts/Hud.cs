@@ -61,8 +61,6 @@ public class Hud : MonoBehaviour
 
 	public void UpdateDashCooldown(float current, float duration)
 	{
-		Debug.Log(current);
-		Debug.Log(duration);
 		Dashbar.value = current / duration;
 	}
 
