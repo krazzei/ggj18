@@ -391,8 +391,8 @@ GameObject:
   - component: {fileID: 136248181089098150}
   - component: {fileID: 23285241292009346}
   - component: {fileID: 114261709961066942}
-  - component: {fileID: 114328332277751326}
   - component: {fileID: 114024535493759358}
+  - component: {fileID: 114328332277751326}
   - component: {fileID: 114364022730986676}
   - component: {fileID: 114371055076407112}
   - component: {fileID: 54386299699562620}
@@ -908,7 +908,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728700509068054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalPosition: {x: 2.69, y: 0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4564183474170934}
@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728700509068054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b6b620f9797a47f09653ac11aae72fd, type: 3}
   m_Name: 
@@ -1252,9 +1252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e5c73a2e8bd4a8cbfc285ef7496fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 3
+  cooldown: 2
   distance: 5
-  duration: 0.2
+  duration: 0.5
 --- !u!136 &136248181089098150
 CapsuleCollider:
   m_ObjectHideFlags: 1

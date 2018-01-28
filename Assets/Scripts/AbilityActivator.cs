@@ -2,25 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AbilityType
-{
-	None,
-	Sword,
-	/// <summary>
-	/// Nice to have.
-	/// </summary>
-	Shield,
-	Gun,
-	Shotgun,
-	Bombs,
-	Spear,
-	Scythe,
-	/// <summary>
-	/// Nice to have.
-	/// </summary>
-	Heal
-}
-
 public class AbilityActivator : MonoBehaviour
 {
 	private AbilityData _data;
@@ -28,7 +9,7 @@ public class AbilityActivator : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetAxis("Fire1") > 0 && Time.time > _lastTime + _data.abilityCooldown && _data != null || _data.abilityPrefab != null)
+		if (_data != null && _data.abilityPrefab != null && Input.GetAxis("Fire1") > 0 && Time.time > _lastTime + _data.abilityCooldown)
 		{
 			_lastTime = Time.time;
 			for (var i = 0; i < _data.amount; ++i)

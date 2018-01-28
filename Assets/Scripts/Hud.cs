@@ -24,20 +24,17 @@ public class Hud : MonoBehaviour
 
 	private List<SliderInfo> _info;
 	private Vector2 _uiOffset;
-	private Canvas _canvas;
 
     private void Awake()
     {
 		instance = this;
 		_info = new List<SliderInfo>();
-		_canvas = GetComponent<Canvas>();
     }
 
     public void MakeCooldownBar(Transform trans, float duration)
 	{
 		Debug.Log("Making cooldown bar");
 		var cdBar = Instantiate(cooldownBar);
-		//cdBar.gameObject.transform.SetParent(trans, false);
 		cdBar.transform.SetParent(transform, false);
 
 		var info = new SliderInfo

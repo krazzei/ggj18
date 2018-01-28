@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
 	public float aggroRange;
 	public float attackRange;
 	public float attackWindup;
-	public AbilityData _abilityData;
+	public AbilityData abilityData;
 
 	private NavMeshAgent _agent;
 	private GameObject _player;
@@ -67,14 +67,17 @@ public class Enemy : MonoBehaviour
 				}
 				break;
 			case EnemyState.Attacking:
-				for (var i = 0; i < _abilityData.amount; ++i)
+				if (abilityData != null && abilityData.abilityPrefab != null)
 				{
-					Instantiate(_abilityData.abilityPrefab, transform.position + transform.forward, transform.rotation);
+					for (var i = 0; i < abilityData.amount; ++i)
+					{
+						Instantiate(abilityData.abilityPrefab, transform.position + transform.forward, transform.rotation);
+					}
 				}
 				_state = EnemyState.Idle;
 				break;
 			case EnemyState.Dead:
-				//bleh
+				Destroy(gameObject);
 				break;
 		}
 	}

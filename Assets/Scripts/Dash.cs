@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Movement), typeof(MouseAim), typeof(JoystickAim))]
+[RequireComponent(typeof(Rigidbody), typeof(Collider), typeof(AbilityActivator))]
 public class Dash : MonoBehaviour
 {
 	public float cooldown;
@@ -27,12 +29,14 @@ public class Dash : MonoBehaviour
 		_joyAim = GetComponent<JoystickAim>();
 		_collider = GetComponent<Collider>();
 		_body = GetComponent<Rigidbody>();
+		_abilityActivator = GetComponent<AbilityActivator>();
     }
 
     private void Update()
     {
         if (Input.GetAxis("Fire2") > 0 && Time.time > _lastDashTime + cooldown && !_isDashing)
 		{
+			_didSwap = false;
 			_isDashing = true;
 			// TODO: invincability.
 			_endPoint = _movement.MovementDir * distance + transform.position;
@@ -84,8 +88,15 @@ public class Dash : MonoBehaviour
 
 		if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
 		{
+			Debug.Log("Swap");
 			_didSwap = true;
 			// TODO: get the enemy component and get their stuff;
+			var enemy = other.GetComponent<Enemy>();
+			if (enemy != null)
+			{
+				var enemyAbility = enemy.abilityData;
+				enemy.abilityData = _abilityActivator.Swap(enemyAbility);
+			}
 		}
     }
 }
