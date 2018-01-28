@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Animator), typeof(Health))]
 public class Enemy : MonoBehaviour
 {
 	public enum EnemyState
@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
 	private EnemyState _state;
 	private float _attackBegin;
 	private Animator _anim;
+	private Health _health;
 
 	private void Awake()
 	{
@@ -34,9 +35,20 @@ public class Enemy : MonoBehaviour
 		_player = FindObjectOfType<Dash>().gameObject;
 		_anim = GetComponent<Animator>();
 		_anim.SetInteger("State", (int)EnemyState.Idle);
+		_health = GetComponent<Health>();
 	}
 
-	private void Update()
+    private void Start()
+    {
+		_health.OnDeath += Dead;
+    }
+
+	private void Dead()
+	{
+		_state = EnemyState.Dead;
+	}
+
+    private void Update()
 	{
 		switch (_state)
 		{

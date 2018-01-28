@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Canvas))]
 public class Hud : MonoBehaviour
@@ -23,6 +24,8 @@ public class Hud : MonoBehaviour
 	public Slider cooldownBar;
 	public Slider HealthBar;
 	public Slider Dashbar;
+	public Text dead;
+	public Image deadBkg;
 
 	private List<SliderInfo> _info;
 	private Vector2 _uiOffset;
@@ -31,6 +34,8 @@ public class Hud : MonoBehaviour
     {
 		instance = this;
 		_info = new List<SliderInfo>();
+		dead.enabled = false;
+		deadBkg.enabled = false;
 
 		DontDestroyOnLoad(gameObject);
     }
@@ -62,6 +67,29 @@ public class Hud : MonoBehaviour
 	public void UpdateDashCooldown(float current, float duration)
 	{
 		Dashbar.value = current / duration;
+	}
+
+	public void Dead()
+	{
+		dead.enabled = true;
+		deadBkg.enabled = true;
+		StartCoroutine(DeadRoutine());
+	}
+
+	private IEnumerator DeadRoutine()
+	{
+		var time = 0.0f;
+		var color = deadBkg.color;
+		while (time < 5f)
+		{
+			color.a = Mathf.Lerp(0, 1, time / 5);
+			deadBkg.color = color;
+			time += Time.deltaTime;
+			yield return null;
+		}
+
+		SceneManager.LoadScene("MainMenu");
+		Destroy(gameObject);
 	}
 
 	private void UpdateHealthBar(float current, float max)
