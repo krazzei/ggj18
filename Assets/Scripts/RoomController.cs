@@ -25,6 +25,14 @@ public class RoomController : MonoBehaviour
         }
     }
 
+    //public void EndRoom()
+    //{
+    //    foreach(var roomObj in _roomObjectsToActivate)
+    //    {
+            
+    //    }
+    //}
+
     public void PauseRoom()
     {
         foreach(var roomObj in _roomObjectsToActivate)
@@ -35,9 +43,14 @@ public class RoomController : MonoBehaviour
 
     private void OnGUI()
     {
-        //if (GUI.Button(new Rect(10, 10, 150, 50), "Start Room"))
-        //{
-        //    StartRoom();
-        //}
+        if (GUI.Button(new Rect(10, 10, 150, 50), "Start Room"))
+        {
+            StartRoom();
+        }
+
+        if(GUI.Button(new Rect(170, 10, 150, 50), "Leave Room"))
+        {
+            PauseRoom();
+        }
     }
 }

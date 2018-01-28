@@ -8,10 +8,10 @@ public class ObjectActivator : MonoBehaviour
 
     [SerializeField]
     private float _delayedStartLength;
-
-    private bool _isActivated = false;
-    private bool _hasSetGameObjectActive = false;
     private float _activationTime;
+
+    protected bool _isActivated = false;
+
 
     public void ActivateObject()
     {
@@ -20,25 +20,22 @@ public class ObjectActivator : MonoBehaviour
         Invoke("SetGameObjectActive", _delayedStartLength);
     }
 
-    private void SetGameObjectActive()
+    protected virtual void SetGameObjectActive()
     {
-        gameObject.SetActive(true);
+        if(_isActivated)
+        {
+            gameObject.SetActive(true);
+        }
     }
 
-    public void DeactivateObject()
+    public virtual void DeactivateObject()
     {
         _isActivated = false;
         gameObject.SetActive(false);
     }
 
-    private void Awake()
-    {
-        
-    }
-
     private void Start()
     {
-        
         gameObject.SetActive(false);
     }
 }
