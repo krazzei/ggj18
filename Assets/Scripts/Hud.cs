@@ -21,6 +21,8 @@ public class Hud : MonoBehaviour
 	}
 
 	public Slider cooldownBar;
+	public Slider HealthBar;
+	public Slider Dashbar;
 
 	private List<SliderInfo> _info;
 	private Vector2 _uiOffset;
@@ -29,6 +31,14 @@ public class Hud : MonoBehaviour
     {
 		instance = this;
 		_info = new List<SliderInfo>();
+
+		DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        var playerHealth = GameMode.instance.playerObject.GetComponent<Health>();
+		playerHealth.OnHealthChanged += UpdateHealthBar;
     }
 
     public void MakeCooldownBar(Transform trans, float duration)
@@ -47,6 +57,18 @@ public class Hud : MonoBehaviour
 		};
 
 		_info.Add(info);
+	}
+
+	public void UpdateDashCooldown(float current, float duration)
+	{
+		Debug.Log(current);
+		Debug.Log(duration);
+		Dashbar.value = current / duration;
+	}
+
+	private void UpdateHealthBar(float current, float max)
+	{
+		HealthBar.value = current / max;
 	}
 
     private void Update()

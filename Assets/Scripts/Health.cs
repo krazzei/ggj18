@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     public float MaxHealth { get { return ApplyModifiersToHealthValues(_maxHealth); } }
     public bool IsInvincible { get { return _isInvincible || _isInvincibleWithDuration; } }
 
+	public System.Action<float, float> OnHealthChanged;
 
     [SerializeField]
     private float _currentHealth = 0.0f;
@@ -31,6 +32,8 @@ public class Health : MonoBehaviour
     {
         _modifierQueue.OnModAdded += OnModAdded;
         _modifierQueue.OnModRemoved -= OnModRemoved;
+
+		_currentHealth = MaxHealth;
 	}
 
     private void OnModAdded(Modifier.ModifierData modData)
@@ -72,6 +75,7 @@ public class Health : MonoBehaviour
             WasHealed(amount);
         }
         _currentHealth += amountAfterProcessing;
+		HealthChanged();
     }
 
     public void SetInvincible(bool isInvincible) {
@@ -153,11 +157,18 @@ public class Health : MonoBehaviour
     }
 
     // Hook for displaying text or showing effects etc
-
     protected virtual void WasHealed(float amount)
     {
         
     }
+
+	protected virtual void HealthChanged()
+	{
+		if (OnHealthChanged != null)
+		{
+			OnHealthChanged(CurrentHealth, MaxHealth);
+		}
+	}
 
     // Hook for displaying text or showing effects etc
     protected virtual void InvincibilityStart()

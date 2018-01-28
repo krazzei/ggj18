@@ -10,6 +10,8 @@ public class MouseAim : MonoBehaviour
     private void Awake()
     {
 		_transform = transform;
+
+		enabled = PlayerPrefs.GetInt("Controller", 0) != 1;
     }
 
 	private void Start()

@@ -11,6 +11,7 @@ public class Ability : MonoBehaviour
 	/// </summary>
 	public float timeToLive = -1;
 	public GameObject deathEffect;
+	public AbilityWeaknesses weakness;
 
 	private float _spawnTime;
 	private bool _isDead;
@@ -22,7 +23,10 @@ public class Ability : MonoBehaviour
 		transform.eulerAngles = eulerAngles;
 
 		var body = GetComponent<Rigidbody>();
-		body.AddForce(transform.forward * speed);
+		if (body != null)
+		{
+			body.AddForce(transform.forward * speed);
+		}
 		_isDead = false;
 		_spawnTime = Time.time;
     }
@@ -42,18 +46,22 @@ public class Ability : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-		ProcessHit();
+		ProcessHit(other.gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        ProcessHit();
+        ProcessHit(collision.gameObject);
     }
 
-	private void ProcessHit()
+	private void ProcessHit(GameObject go)
 	{
-		// TODO: deal damage to the damage receiver.
-		Debug.Log("Hit");
+		var damageReceiver = go.GetComponent<DamageReceiver>();
+		if (damageReceiver != null)
+		{
+			damageReceiver.TakeDamage(damage, weakness);
+		}
+
 		if (dieOnHit)
 		{
 			Destroy(gameObject);

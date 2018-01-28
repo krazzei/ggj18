@@ -11,6 +11,8 @@ public class JoystickAim : MonoBehaviour
     {
 		_transform = transform;
 		_aim = new Vector3();
+
+		enabled = PlayerPrefs.GetInt("Controller", 0) == 1;
     }
 
     private void Update()

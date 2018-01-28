@@ -53,6 +53,7 @@ public class Dash : MonoBehaviour
 			//Hud.instance.MakeCooldownBar(transform, cooldown);
 			StartCoroutine(DashRoutine());
 		}
+		Hud.instance.UpdateDashCooldown(Time.time - _lastDashTime, cooldown);
     }
 
 	private IEnumerator DashRoutine()
