@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(Animator))]
 public class Enemy : MonoBehaviour
 {
 	public enum EnemyState
 	{
-		Idle,
+		Idle = 0,
 		Pathing,
 		AttackBuildUp,
 		Attacking,
@@ -23,6 +24,7 @@ public class Enemy : MonoBehaviour
 	private GameObject _player;
 	private EnemyState _state;
 	private float _attackBegin;
+	private Animator _anim;
 
 	private void Awake()
 	{
@@ -30,6 +32,8 @@ public class Enemy : MonoBehaviour
 		_state = EnemyState.Idle;
 		// lulz
 		_player = FindObjectOfType<Dash>().gameObject;
+		_anim = GetComponent<Animator>();
+		_anim.SetInteger("State", (int)EnemyState.Idle);
 	}
 
 	private void Update()
@@ -41,6 +45,7 @@ public class Enemy : MonoBehaviour
 				if (Vector3.Distance(transform.position, _player.transform.position) < aggroRange)
 				{
 					_state = EnemyState.Pathing;
+					_anim.SetInteger("State", (int)_state);
 				}
 				break;
 			case EnemyState.Pathing:
@@ -59,11 +64,13 @@ public class Enemy : MonoBehaviour
 				if (Time.time > _attackBegin + attackWindup)
 				{
 					_state = EnemyState.Attacking;
+					_anim.SetInteger("State", (int)_state);
 				}
 
 				if (Vector3.Distance(transform.position, _player.transform.position) > attackRange)
 				{
 					_state = EnemyState.Pathing;
+					_anim.SetInteger("State", (int)_state);
 				}
 				break;
 			case EnemyState.Attacking:
@@ -75,6 +82,7 @@ public class Enemy : MonoBehaviour
 					}
 				}
 				_state = EnemyState.Idle;
+				_anim.SetInteger("State", (int)_state);
 				break;
 			case EnemyState.Dead:
 				Destroy(gameObject);
@@ -84,8 +92,8 @@ public class Enemy : MonoBehaviour
 
 	private void StartAttack()
 	{
-		Debug.Log("Start Attack");
 		_state = EnemyState.AttackBuildUp;
+		_anim.SetInteger("State", (int)_state);
 		_attackBegin = Time.time;
 		//Hud.instance.MakeCooldownBar(transform, attackWindup);
 	}

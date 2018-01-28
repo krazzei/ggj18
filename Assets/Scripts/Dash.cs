@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Movement), typeof(MouseAim), typeof(JoystickAim))]
 [RequireComponent(typeof(Rigidbody), typeof(Collider), typeof(AbilityActivator))]
-[RequireComponent(typeof(ModifierQueue))]
+[RequireComponent(typeof(ModifierQueue), typeof(TwigsGhettoAnimator))]
 public class Dash : MonoBehaviour
 {
 	public float cooldown;
@@ -23,6 +23,7 @@ public class Dash : MonoBehaviour
 	private Vector3 _capsuleCenterOffset;
 	private Rigidbody _body;
 	private ModifierQueue _modQueue;
+	private TwigsGhettoAnimator _animator;
 
     private void Awake()
     {
@@ -33,6 +34,9 @@ public class Dash : MonoBehaviour
 		_body = GetComponent<Rigidbody>();
 		_abilityActivator = GetComponent<AbilityActivator>();
 		_modQueue = GetComponent<ModifierQueue>();
+		_animator = GetComponent<TwigsGhettoAnimator>();
+
+		_lastDashTime = Time.time - cooldown;
     }
 
     private void Update()
@@ -65,6 +69,8 @@ public class Dash : MonoBehaviour
 		_joyAim.enabled = false;
 		_movement.enabled = false;
 
+		_animator.ChangeAnimState(AnimationState.Dash, duration);
+
 		var time = 0f;
 		var startPos = transform.position;
 		while (time < duration)
@@ -75,6 +81,8 @@ public class Dash : MonoBehaviour
 		}
 		_lastDashTime = Time.time;
 		_isDashing = false;
+
+		_animator.ChangeAnimState(AnimationState.Idle);
 
 		_mouseAim.enabled = mouseAim;
 		_joyAim.enabled = joyAim;
@@ -92,9 +100,7 @@ public class Dash : MonoBehaviour
 
 		if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
 		{
-			Debug.Log("Swap");
 			_didSwap = true;
-			// TODO: get the enemy component and get their stuff;
 			var enemy = other.GetComponent<Enemy>();
 			if (enemy != null)
 			{

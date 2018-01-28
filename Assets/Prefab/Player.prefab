@@ -279,7 +279,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4002032863917204}
-  - component: {fileID: 95195014839125940}
+  - component: {fileID: 95146891206653376}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -389,17 +389,16 @@ GameObject:
   - component: {fileID: 4839763226454080}
   - component: {fileID: 33099675890114322}
   - component: {fileID: 136248181089098150}
-  - component: {fileID: 23285241292009346}
   - component: {fileID: 114261709961066942}
   - component: {fileID: 114024535493759358}
   - component: {fileID: 114328332277751326}
   - component: {fileID: 114364022730986676}
   - component: {fileID: 114371055076407112}
   - component: {fileID: 54386299699562620}
-  - component: {fileID: 95584133159389462}
   - component: {fileID: 114937832986244742}
   - component: {fileID: 114393948119891648}
   - component: {fileID: 114537201695548852}
+  - component: {fileID: 114406264814354022}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -912,7 +911,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728700509068054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalPosition: {x: 7.9, y: 0.4, z: 5.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4564183474170934}
@@ -984,40 +983,6 @@ MeshRenderer:
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!23 &23285241292009346
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1728700509068054}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
@@ -1183,30 +1148,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!95 &95195014839125940
+--- !u!95 &95146891206653376
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1429605678642562}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: cf5214b2b3576e94793a6addb88801fa, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95584133159389462
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1728700509068054}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cf5214b2b3576e94793a6addb88801fa, type: 3}
   m_Controller: {fileID: 9100000, guid: a28825df4d3a3a8419ef70509eeeb0ac, type: 2}
@@ -1274,7 +1222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
-  distance: 3
+  distance: 5
   duration: 0.2
 --- !u!114 &114393948119891648
 MonoBehaviour:
@@ -1293,6 +1241,18 @@ MonoBehaviour:
   _isInvincible: 0
   _invincibleDuration: 3
   _modifierQueue: {fileID: 114937832986244742}
+--- !u!114 &114406264814354022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728700509068054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b869bfe66a6443689b7c5ac94c4e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 95146891206653376}
 --- !u!114 &114537201695548852
 MonoBehaviour:
   m_ObjectHideFlags: 1
