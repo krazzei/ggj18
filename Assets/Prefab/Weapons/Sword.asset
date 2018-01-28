@@ -13,6 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityPrefab: {fileID: 114461019346368964, guid: 380144680a64f4b91b1dc52bb569d8c0,
     type: 2}
-  amount: 0
-  type: 1
-  abilityCooldown: 0
+  amount: 1
+  abilityCooldown: 2

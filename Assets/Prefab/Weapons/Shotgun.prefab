@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db2b96600b424e1a9457a29e6fe547f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  spawnRotationDeviation: 0
-  speed: 0
-  dieOnHit: 0
+  damage: 2
+  spawnRotationDeviation: 10
+  speed: 5
+  dieOnHit: 1
   timeToLive: -1
   deathEffect: {fileID: 0}
+  weakness: 0
