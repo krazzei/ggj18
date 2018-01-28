@@ -56,6 +56,11 @@ public class Ability : MonoBehaviour
 
 	private void ProcessHit(GameObject go)
 	{
+		if (go.layer == LayerMask.NameToLayer("Projectile"))
+		{
+			return;
+		}
+
 		var damageReceiver = go.GetComponent<DamageReceiver>();
 		if (damageReceiver != null)
 		{
