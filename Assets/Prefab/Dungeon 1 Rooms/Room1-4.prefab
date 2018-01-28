@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 4564045466420618}
   - component: {fileID: 33165869700562564}
   - component: {fileID: 23978518882174742}
-  - component: {fileID: 95671052216959786}
+  - component: {fileID: 136096893565020134}
   m_Layer: 8
   m_Name: ColumnBroken (1)
   m_TagString: Untagged
@@ -1647,7 +1647,7 @@ GameObject:
   - component: {fileID: 4460401322823874}
   - component: {fileID: 33189740395568276}
   - component: {fileID: 23657212314511358}
-  - component: {fileID: 95992765089128026}
+  - component: {fileID: 136653125431958720}
   m_Layer: 8
   m_Name: ColumnBroken
   m_TagString: Untagged
@@ -3767,7 +3767,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1945046180223772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.559, y: -2.19, z: -1.7485}
+  m_LocalPosition: {x: 49.847, y: -2.19, z: -1.7842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4674140378425422}
@@ -9311,37 +9311,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0000002, y: 0.36673713, z: 2.0000005}
   m_Center: {x: 0, y: 0.17819706, z: 0.000000059604645}
---- !u!95 &95671052216959786
-Animator:
-  serializedVersion: 3
+--- !u!136 &136096893565020134
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252792719112344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 564dfce9fd968e74d9c4d7e558071c31, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95992765089128026
-Animator:
-  serializedVersion: 3
+  m_Radius: 1.2353897
+  m_Height: 1.3862891
+  m_Direction: 1
+  m_Center: {x: -0.00000017881409, y: 0.68191767, z: -0.32046056}
+--- !u!136 &136653125431958720
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1751046633002134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 564dfce9fd968e74d9c4d7e558071c31, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Radius: 1.2353897
+  m_Height: 1.3862879
+  m_Direction: 1
+  m_Center: {x: -0.00000017881393, y: 0.6819173, z: -0.32046062}
