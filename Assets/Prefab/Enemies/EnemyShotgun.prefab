@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 95114102105551228}
   - component: {fileID: 114097896296742740}
   - component: {fileID: 195026789495187418}
+  - component: {fileID: 114274805250584904}
   m_Layer: 0
   m_Name: EnemyShotgun
   m_TagString: Untagged
@@ -969,10 +970,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed9ce6522580453284e3917aef65d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 0
-  attackRange: 0
-  attackWindup: 0
-  _abilityData: {fileID: 0}
+  aggroRange: 5
+  attackRange: 5
+  attackWindup: 4
+  abilityData: {fileID: 11400000, guid: 13089b4513615ec44bed28a635108485, type: 2}
+--- !u!114 &114274805250584904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1083033988228456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805b43bd0a5fe45fe8ef37ec4525f65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numModifiersToHold: 5
 --- !u!137 &137708657435815742
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

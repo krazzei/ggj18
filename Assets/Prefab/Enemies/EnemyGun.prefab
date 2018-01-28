@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 95433273749954130}
   - component: {fileID: 114617752512600504}
   - component: {fileID: 195165965834472752}
+  - component: {fileID: 114544185094216856}
   m_Layer: 0
   m_Name: EnemyGun
   m_TagString: Untagged
@@ -1030,6 +1031,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114544185094216856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506178944062110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805b43bd0a5fe45fe8ef37ec4525f65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numModifiersToHold: 5
 --- !u!114 &114617752512600504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1041,10 +1054,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed9ce6522580453284e3917aef65d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 0
-  attackRange: 0
-  attackWindup: 0
-  _abilityData: {fileID: 0}
+  aggroRange: 5
+  attackRange: 5
+  attackWindup: 2
+  abilityData: {fileID: 11400000, guid: 7ea0cbaeb87dddd418b742cb3297aeab, type: 2}
 --- !u!137 &137169760682192850
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
