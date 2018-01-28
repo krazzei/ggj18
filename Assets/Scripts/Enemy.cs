@@ -9,22 +9,27 @@ public class Enemy : MonoBehaviour
 	{
 		Idle,
 		Pathing,
+		AttackBuildUp,
 		Attacking,
 		Dead
 	}
 
 	public float aggroRange;
 	public float attackRange;
-	public float attackCooldown;
+	public float attackWindup;
+	public AbilityData _abilityData;
 
 	private NavMeshAgent _agent;
-	public GameObject _player;
+	private GameObject _player;
 	private EnemyState _state;
+	private float _attackBegin;
 
 	private void Awake()
 	{
 		_agent = GetComponent<NavMeshAgent>();
 		_state = EnemyState.Idle;
+		// lulz
+		_player = FindObjectOfType<Dash>().gameObject;
 	}
 
 	private void Update()
@@ -45,22 +50,40 @@ public class Enemy : MonoBehaviour
 					_agent.SetDestination(_player.transform.position);
 					if (Vector3.Distance(transform.position, _player.transform.position) < attackRange)
 					{
-						_state = EnemyState.Attacking;
+						StartAttack();
 					}
 				}
 				break;
-			case EnemyState.Attacking:
-				// pew pew
-				Debug.Log("Pew Pew");
+			case EnemyState.AttackBuildUp:
 				_agent.isStopped = true;
+				if (Time.time > _attackBegin + attackWindup)
+				{
+					_state = EnemyState.Attacking;
+				}
+
 				if (Vector3.Distance(transform.position, _player.transform.position) > attackRange)
 				{
 					_state = EnemyState.Pathing;
 				}
 				break;
+			case EnemyState.Attacking:
+				for (var i = 0; i < _abilityData.amount; ++i)
+				{
+					Instantiate(_abilityData.abilityPrefab, transform.position + transform.forward, transform.rotation);
+				}
+				_state = EnemyState.Idle;
+				break;
 			case EnemyState.Dead:
 				//bleh
 				break;
 		}
+	}
+
+	private void StartAttack()
+	{
+		Debug.Log("Start Attack");
+		_state = EnemyState.AttackBuildUp;
+		_attackBegin = Time.time;
+		//Hud.instance.MakeCooldownBar(transform, attackWindup);
 	}
 }

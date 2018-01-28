@@ -21,7 +21,8 @@ public enum AbilityType
 	Heal
 }
 
-public struct AbilityData
+[CreateAssetMenu(fileName = "Data", menuName = "Ability/Data")]
+public class AbilityData : ScriptableObject
 {
 	public Ability abilityPrefab;
 	public int amount;

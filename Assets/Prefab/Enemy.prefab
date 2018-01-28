@@ -98,8 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aggroRange: 5
   attackRange: 2
-  attackCooldown: 0
-  _player: {fileID: 0}
+  attackWindup: 2
+  _abilityData: {fileID: 11400000, guid: 3f8ddd5b78baf403c83da43aabef6552, type: 2}
 --- !u!136 &136172773962635782
 CapsuleCollider:
   m_ObjectHideFlags: 1
