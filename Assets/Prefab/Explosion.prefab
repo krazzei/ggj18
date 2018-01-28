@@ -144,7 +144,7 @@ MonoBehaviour:
   spawnRotationDeviation: 0
   speed: 0
   dieOnHit: 0
-  timeToLive: -1
+  timeToLive: 1
   deathEffect: {fileID: 0}
   weakness: 0
 --- !u!135 &135646713190675382

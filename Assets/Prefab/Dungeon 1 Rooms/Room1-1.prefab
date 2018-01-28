@@ -17536,6 +17536,7 @@ MonoBehaviour:
   attackRange: 2.75
   attackWindup: 5
   abilityData: {fileID: 11400000, guid: 19982a0ec145f6e45b88cb943d05b278, type: 2}
+  offset: {x: 0, y: 0.1, z: 0}
 --- !u!114 &114154830788271828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17656,6 +17657,7 @@ MonoBehaviour:
   attackRange: 9
   attackWindup: 4
   abilityData: {fileID: 11400000, guid: 7ea0cbaeb87dddd418b742cb3297aeab, type: 2}
+  offset: {x: 0, y: 0.5, z: 0}
 --- !u!114 &114400603260944568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17671,6 +17673,7 @@ MonoBehaviour:
   attackRange: 2
   attackWindup: 2
   abilityData: {fileID: 11400000, guid: 9742c763a91e67843b732dc99fefbbdd, type: 2}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &114478597423486854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17703,6 +17706,7 @@ MonoBehaviour:
   attackRange: 2
   attackWindup: 2
   abilityData: {fileID: 11400000, guid: e85e761040e4be64184245c2aff390e0, type: 2}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &114536319552085540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17730,6 +17734,7 @@ MonoBehaviour:
   attackRange: 2
   attackWindup: 2
   abilityData: {fileID: 11400000, guid: 029369077176d2349a8b1322e0b08fb8, type: 2}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &114767642090926016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17862,6 +17867,7 @@ MonoBehaviour:
   attackRange: 6
   attackWindup: 4
   abilityData: {fileID: 11400000, guid: 13089b4513615ec44bed28a635108485, type: 2}
+  offset: {x: 0, y: 0.1, z: 0}
 --- !u!114 &114989586913577668
 MonoBehaviour:
   m_ObjectHideFlags: 1
