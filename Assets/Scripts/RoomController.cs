@@ -7,9 +7,10 @@ public class RoomController : MonoBehaviour
 {
     protected List<ObjectActivator> _roomObjectsToActivate = new List<ObjectActivator>();
 
-    protected void Start()
+    protected void Awake()
     {
-        _roomObjectsToActivate = gameObject.GetComponentsInChildren<ObjectActivator>().ToList();
+        var comps = gameObject.GetComponentsInChildren<ObjectActivator>();
+        _roomObjectsToActivate = comps.ToList();
 	}
 	
     protected void Update() 
@@ -29,7 +30,7 @@ public class RoomController : MonoBehaviour
     //{
     //    foreach(var roomObj in _roomObjectsToActivate)
     //    {
-            
+    //        
     //    }
     //}
 
@@ -43,14 +44,14 @@ public class RoomController : MonoBehaviour
 
     private void OnGUI()
     {
-        if (GUI.Button(new Rect(10, 10, 150, 50), "Start Room"))
-        {
-            StartRoom();
-        }
+        //if (GUI.Button(new Rect(10, 10, 150, 50), "Start Room"))
+        //{
+        //    StartRoom();
+        //}
 
-        if(GUI.Button(new Rect(170, 10, 150, 50), "Leave Room"))
-        {
-            PauseRoom();
-        }
+        //if(GUI.Button(new Rect(170, 10, 150, 50), "Leave Room"))
+        //{
+        //    PauseRoom();
+        //}
     }
 }
