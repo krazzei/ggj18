@@ -103,6 +103,6 @@ MonoBehaviour:
   spawnRotationDeviation: 10
   speed: 5
   dieOnHit: 1
-  timeToLive: -1
+  timeToLive: 0.1
   deathEffect: {fileID: 0}
   weakness: 0
