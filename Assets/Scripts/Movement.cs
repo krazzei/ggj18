@@ -4,7 +4,7 @@ public class Movement : MonoBehaviour
 {
 	public float speed;
 	private Vector3 _movement;
-	private Transform _transform;
+	private Rigidbody _body;
 
 	public Vector3 MovementDir
 	{
@@ -14,13 +14,13 @@ public class Movement : MonoBehaviour
 	private void Awake()
 	{
 		_movement = new Vector3();
-		_transform = transform;
+		_body = GetComponent<Rigidbody>();
 	}
 
 	/// <summary>
 	/// Might want to move this to a fixed update method.
 	/// </summary>
-	private void Update()
+	private void FixedUpdate()
 	{
 		_movement.x = Input.GetAxis("Horizontal");
 		_movement.z = Input.GetAxis("Vertical");
@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
 		// diagonal.
 		_movement.Normalize();
 
-		_transform.position += _movement * speed * Time.deltaTime;
+		//_transform.position += _movement * speed * Time.deltaTime;
+		_body.MovePosition(_body.position + _movement * speed * Time.deltaTime);
 	}
 }

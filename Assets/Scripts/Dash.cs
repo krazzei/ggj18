@@ -14,19 +14,19 @@ public class Dash : MonoBehaviour
 	private MouseAim _mouseAim;
 	private JoystickAim _joyAim;
 	private Movement _movement;
-	private CapsuleCollider _collider;
+	private Collider _collider;
 	private bool _didSwap;
 	private AbilityActivator _abilityActivator;
 	private Vector3 _capsuleCenterOffset;
+	private Rigidbody _body;
 
     private void Awake()
     {
 		_movement = GetComponent<Movement>();
 		_mouseAim = GetComponent<MouseAim>();
 		_joyAim = GetComponent<JoystickAim>();
-		_collider = GetComponent<CapsuleCollider>();
-
-		_capsuleCenterOffset = _collider.center + Vector3.down * _collider.height * 0.5f;
+		_collider = GetComponent<Collider>();
+		_body = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -61,7 +61,7 @@ public class Dash : MonoBehaviour
 		while (time < duration)
 		{
 			time += Time.deltaTime;
-			transform.position = Vector3.Lerp(startPos, _endPoint, time / duration);
+			_body.MovePosition(Vector3.Lerp(startPos, _endPoint, time / duration));
 			yield return null;
 		}
 		_lastDashTime = Time.time;
@@ -71,6 +71,7 @@ public class Dash : MonoBehaviour
 		_joyAim.enabled = joyAim;
 		_movement.enabled = true;
 		_collider.isTrigger = false;
+		_body.velocity = Vector3.zero;
 	}
 
     private void OnTriggerEnter(Collider other)
