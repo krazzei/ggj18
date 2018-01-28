@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
 	public float attackRange;
 	public float attackWindup;
 	public AbilityData abilityData;
+	public Vector3 offset;
 
 	private NavMeshAgent _agent;
 	private GameObject _player;
@@ -86,11 +87,12 @@ public class Enemy : MonoBehaviour
 				}
 				break;
 			case EnemyState.Attacking:
+				transform.LookAt(_player.transform);
 				if (abilityData != null && abilityData.abilityPrefab != null)
 				{
 					for (var i = 0; i < abilityData.amount; ++i)
 					{
-						Instantiate(abilityData.abilityPrefab, transform.position + transform.forward, transform.rotation);
+						Instantiate(abilityData.abilityPrefab, transform.position + transform.forward + offset, transform.rotation);
 					}
 				}
 				_state = EnemyState.Idle;
