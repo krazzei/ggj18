@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Movement), typeof(MouseAim), typeof(JoystickAim))]
 [RequireComponent(typeof(Rigidbody), typeof(Collider), typeof(AbilityActivator))]
+[RequireComponent(typeof(ModifierQueue))]
 public class Dash : MonoBehaviour
 {
 	public float cooldown;
@@ -21,6 +22,7 @@ public class Dash : MonoBehaviour
 	private AbilityActivator _abilityActivator;
 	private Vector3 _capsuleCenterOffset;
 	private Rigidbody _body;
+	private ModifierQueue _modQueue;
 
     private void Awake()
     {
@@ -30,6 +32,7 @@ public class Dash : MonoBehaviour
 		_collider = GetComponent<Collider>();
 		_body = GetComponent<Rigidbody>();
 		_abilityActivator = GetComponent<AbilityActivator>();
+		_modQueue = GetComponent<ModifierQueue>();
     }
 
     private void Update()
@@ -96,6 +99,12 @@ public class Dash : MonoBehaviour
 			{
 				var enemyAbility = enemy.abilityData;
 				enemy.abilityData = _abilityActivator.Swap(enemyAbility);
+			}
+
+			var mod = other.GetComponent<Modifier>();
+			if (mod != null)
+			{
+				_modQueue.AddModifier(mod.ModData);
 			}
 		}
     }

@@ -36,6 +36,9 @@ public class ModifierQueue : MonoBehaviour
         var modifier = gameObject.AddComponent<Modifier>();
         modifier.ModData = modifierData;
         _modifierQueue.Enqueue(modifier);
-        OnModAdded(modifier.ModData);
+		if (OnModAdded != null)
+		{
+			OnModAdded(modifier.ModData);
+		}
     }
 }
