@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 3
-  distance: 5
+  distance: 3
   duration: 0.2
 --- !u!114 &114393948119891648
 MonoBehaviour:

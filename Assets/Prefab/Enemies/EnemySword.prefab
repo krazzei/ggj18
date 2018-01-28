@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 114359000017700576}
   - component: {fileID: 114112194050839098}
   - component: {fileID: 114650877522994778}
+  - component: {fileID: 65913135826236058}
   m_Layer: 0
   m_Name: EnemySword
   m_TagString: Untagged
@@ -615,7 +616,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1991276598558926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35134503, y: -0.6284344, z: 2.314295}
+  m_LocalPosition: {x: 3.5259495, y: -0.6284344, z: -4.296732}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4471124526884792}
@@ -944,6 +945,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1188674066488900}
   m_Mesh: {fileID: 4300004, guid: 8eba73c9d1283a14b8452587d9e5db29, type: 3}
+--- !u!65 &65913135826236058
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991276598558926}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 5, z: 1.5}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!95 &95673159660552476
 Animator:
   serializedVersion: 3

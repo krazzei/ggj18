@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 114274805250584904}
   - component: {fileID: 114885312035179562}
   - component: {fileID: 114221642600659700}
+  - component: {fileID: 65455747255178320}
   m_Layer: 0
   m_Name: EnemyShotgun
   m_TagString: Untagged
@@ -491,7 +492,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1083033988228456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3955512, y: -0.6284344, z: -2.3823233}
+  m_LocalPosition: {x: -1.9393735, y: -0.62841535, z: -5.8094077}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4100975613164974}
@@ -944,6 +945,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1472417557928990}
   m_Mesh: {fileID: 4300002, guid: 86a74e284b74ad944af75990cac79031, type: 3}
+--- !u!65 &65455747255178320
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1083033988228456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 5, z: 1.5}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!95 &95114102105551228
 Animator:
   serializedVersion: 3
