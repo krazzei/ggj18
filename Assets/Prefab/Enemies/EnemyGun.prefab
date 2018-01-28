@@ -1106,6 +1106,7 @@ MonoBehaviour:
   attackRange: 9
   attackWindup: 4
   abilityData: {fileID: 11400000, guid: 7ea0cbaeb87dddd418b742cb3297aeab, type: 2}
+  offset: {x: 0, y: 0.5, z: 0}
 --- !u!114 &114927683583260356
 MonoBehaviour:
   m_ObjectHideFlags: 1
