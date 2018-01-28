@@ -9,9 +9,9 @@ public class DamageReceiver : MonoBehaviour
     private Health _health;
 
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(float amount, AbilityWeaknesses damageType)
     {
-        _health.AddHealth(-amount);
+        _health.AddHealth(-amount, damageType);
     }
 
     public void SetInvincibile(bool isInvincible)

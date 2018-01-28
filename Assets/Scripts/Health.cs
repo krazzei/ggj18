@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour 
 {
-    public float CurrentHealth { get { return _currentHealth; } }
-    public float MaxHealth { get { return _maxHealth; } }
+    public float CurrentHealth { get { return ApplyModifiersToHealthValues(_currentHealth); } }
+    public float MaxHealth { get { return ApplyModifiersToHealthValues(_maxHealth); } }
     public bool IsInvincible { get { return _isInvincible || _isInvincibleWithDuration; } }
 
 
@@ -20,6 +20,8 @@ public class Health : MonoBehaviour
     private bool _isInvincibleWithDuration = false;
     [SerializeField]
     private float _invincibleDuration = 3f;
+    [SerializeField]
+    private ModifierQueue _modifierQueue;
 
     private float _invincibleStartTime;
     private float _lastHitTime;
@@ -27,10 +29,32 @@ public class Health : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-		
+        _modifierQueue.OnModAdded += OnModAdded;
+        _modifierQueue.OnModRemoved -= OnModRemoved;
 	}
 
-    public void AddHealth(float amount)
+    private void OnModAdded(Modifier.ModifierData modData)
+    {
+        // Not sure if need right now. Values are being calculated on the fly...
+    }
+
+    private void OnModRemoved(Modifier.ModifierData modData)
+    {
+        // Not sure if need right now. Values are being calculated on the fly...
+    }
+
+    private float ApplyModifiersToHealthValues(float health)
+    {
+        var mods = _modifierQueue.GetAllModifierData();
+        float newValue = health;
+        foreach(var mod in mods)
+        {
+            newValue += newValue * mod.healthPercentage;
+        }
+        return newValue;
+    }
+
+    public void AddHealth(float amount, AbilityWeaknesses damageType)
     {
         var amountAfterProcessing = 0f;
         if(amount < 0)
@@ -38,16 +62,16 @@ public class Health : MonoBehaviour
             if(!IsInvincible)
             {
                 _lastHitTime = Time.time;
-                amountAfterProcessing = ProcessIncomingDamage(amount);
+                amountAfterProcessing = ProcessIncomingDamage(amount, damageType);
                 TookDamage(amount);
             }
         }
         else
         {
-            amountAfterProcessing = ProcessIncomingHealth(amount);
+            amountAfterProcessing = ProcessIncomingHealth(amount, damageType);
             WasHealed(amount);
         }
-        _currentHealth += amount;
+        _currentHealth += amountAfterProcessing;
     }
 
     public void SetInvincible(bool isInvincible) {
@@ -94,15 +118,32 @@ public class Health : MonoBehaviour
 	}
 
     // Hook for doing damage calculations from modifiers
-    protected virtual float ProcessIncomingDamage(float amount)
+    protected virtual float ProcessIncomingDamage(float amount, AbilityWeaknesses damageType)
     {
-        return amount;
+        float adjustedAmount = amount;
+        foreach (var mod in _modifierQueue.GetAllModifierData())
+        {
+            if(((int)mod.weakness & (int)damageType) > 0 || (mod.weakness == AbilityWeaknesses.All))
+            {
+                adjustedAmount += adjustedAmount * mod.damageTakenPercentage;
+            }
+        }
+
+        return adjustedAmount;
     }
 
     // Hook for doing health gained calculations from modifiers
-    protected virtual float ProcessIncomingHealth(float amount)
+    protected virtual float ProcessIncomingHealth(float amount, AbilityWeaknesses damageType)
     {
-        return amount;
+        float adjustedAmount = amount;
+        foreach(var mod in _modifierQueue.GetAllModifierData())
+        {
+            if (((int)mod.weakness & (int)damageType) > 0 || (mod.weakness == AbilityWeaknesses.All))
+            {
+                adjustedAmount += adjustedAmount * mod.healthGrantedPercentage;
+            }
+        }
+        return adjustedAmount;
     }
 
     // Hook for displaying text or showing effects etc
