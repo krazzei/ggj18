@@ -445,6 +445,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4464896182124408}
   - component: {fileID: 95673159660552476}
+  - component: {fileID: 114798657943256534}
+  - component: {fileID: 195000277359203824}
   m_Layer: 0
   m_Name: EnemySword
   m_TagString: Untagged
@@ -948,7 +950,7 @@ Animator:
   m_GameObject: {fileID: 1991276598558926}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8eba73c9d1283a14b8452587d9e5db29, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 776198343477fe24496be97fcb995b74, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -956,6 +958,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114798657943256534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991276598558926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed9ce6522580453284e3917aef65d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aggroRange: 0
+  attackRange: 0
+  attackWindup: 0
+  abilityData: {fileID: 0}
 --- !u!137 &137008648870730240
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1026,3 +1043,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.009578109, y: -0.05651164, z: -0.02471307}
     m_Extent: {x: 3.0168757, y: 2.7437391, z: 0.58104825}
   m_DirtyAABB: 0
+--- !u!195 &195000277359203824
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991276598558926}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

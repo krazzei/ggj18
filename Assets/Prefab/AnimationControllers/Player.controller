@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: EnemySpear
+  m_Name: EnemySword
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -153,7 +153,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SpearAttack
+  m_Name: SwordAttack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -168,7 +168,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a242e107e85eef9499ead1c39fe1c8a3, type: 3}
+  m_Motion: {fileID: 7400000, guid: 592f82f3b798cfd49a5a056e4fe4b074, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
