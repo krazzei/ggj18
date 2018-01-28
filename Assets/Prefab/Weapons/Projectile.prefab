@@ -113,9 +113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   spawnRotationDeviation: 1
-  speed: 125
-  dieOnHit: 1
-  timeToLive: -1
+  speed: 200
+  dieOnHit: 0
+  timeToLive: 3
   deathEffect: {fileID: 0}
   weakness: 0
 --- !u!135 &135600363547654588
@@ -125,7 +125,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1695298094008564}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.04
