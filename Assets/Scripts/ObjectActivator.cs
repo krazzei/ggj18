@@ -17,7 +17,9 @@ public class ObjectActivator : MonoBehaviour
     {
         _isActivated = true;
         _activationTime = Time.time;
-        Invoke("SetGameObjectActive", _delayedStartLength);
+        gameObject.SetActive(true);
+        SetGameObjectActive();
+        //Invoke("SetGameObjectActive", _delayedStartLength);
     }
 
     protected virtual void SetGameObjectActive()

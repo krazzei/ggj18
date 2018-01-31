@@ -16,6 +16,11 @@ public class DoorActivator : ObjectActivator
 
     private void Awake()
     {
+        
+    }
+
+    private void Start()
+    {
         _initialPosition = transform.position;
         _finalDestination = _destinationPosition.transform.position;
     }
